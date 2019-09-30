@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+
+            let readNumber = function () {                
+                let sNumber = prompt('Введите число');
+
+                if (sNumber === '' || sNumber === null) {
+                    return null;
+                }
+
+                if (isNaN(sNumber)) {
+                    return readNumber();
+                }
+
+                return sNumber;
+            }
+
+            console.log('result: ' + readNumber());
+
+        })();
+    </script>
+</body>
+</html>
