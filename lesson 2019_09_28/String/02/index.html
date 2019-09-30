@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+
+            var checkSpam = function (theStr) {
+                var sStr = theStr.toLowerCase();
+                if (sStr.indexOf('xxx') != -1 || sStr.indexOf('viagra') != -1) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            console.log( checkSpam('buy ViAgRA now') == true );
+            console.log( checkSpam('free xxxxx') == true );
+            console.log( checkSpam("innocent rabbit") == false );
+            
+        })();
+    </script>
+</body>
+</html>

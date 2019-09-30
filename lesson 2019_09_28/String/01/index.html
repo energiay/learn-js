@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+
+            var ucFirst = function (theStr) {
+                var sStr = String(theStr);
+                if (sStr.length == 0) {
+                    return sStr;
+                }
+
+                return sStr[0].toUpperCase() + sStr.slice(1);
+            }
+
+            console.log( ucFirst("вася") == "Вася" )
+            
+        })();
+    </script>
+</body>
+</html>

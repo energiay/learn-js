@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+
+            var truncate = function (theStr, theLength) {
+                let sStr = String(theStr);
+                if (sStr.length > theLength) {
+                    return sStr.slice(0, theLength - 1) + '…';
+                }
+
+                return theStr;
+            }
+
+            console.log( truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) == "Вот, что мне хотело…" );
+            console.log( truncate("Всем привет!", 20) == "Всем привет!" );
+            console.log( truncate("проверка проверка 01", 20) == "проверка проверка 01" );
+            
+        })();
+    </script>
+</body>
+</html>
