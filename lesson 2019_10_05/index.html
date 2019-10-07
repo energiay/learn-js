@@ -13,7 +13,7 @@
                 var result = {};
                 for (let i = 0; i < theStr.length; i++) {
                     var field = theStr[i];
-                    result[field] = !result[field] ? 1 : (result[field] + 1);
+                    result[field] = !result[field] ? 1 : result[field] + 1;
                 }
                 
                 var sResult = '';
