@@ -10,17 +10,17 @@
         (function () {
             
             var convertStr = function (theStr) {
-                var result = {};
+                let sResult = '';
+                let count = 0;
+                
                 for (let i = 0; i < theStr.length; i++) {
-                    var field = theStr[i];
-                    result[field] = !result[field] ? 1 : result[field] + 1;
+                    count++;
+                    if (theStr[i] != theStr[i+1]) {
+                        sResult += count + '' + theStr[i];
+                        count = 0;
+                    }
                 }
                 
-                var sResult = '';
-                for (key in result) {
-                    sResult += result[key] + key;
-                }
-
                 return sResult
             }
 
