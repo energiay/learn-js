@@ -1,0 +1,7 @@
+Задача  
+// 'aaabbccdda' => '3a2b2c2d1a';
+let str = 'aaabbccdda'
+function fn (s){
+   return ''
+}
+fn(str) // '3a2b2c2d1a'
