@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        (function () {
+            
+            let camelize = function (str) {
+                let arrStr = str.split('');
+                for (let i = 0; i < arrStr.length; i++) {
+                    if (arrStr[i] === '-') {
+                        arrStr.splice(i, 1); // удалить элемент (при удалении массив смещается)
+                        arrStr[i] = arrStr[i].toUpperCase(); // сделать букву заглавной
+                    }
+                }
+                
+                return arrStr.join('');
+            }
+            
+            console.log( camelize("background-color") == 'backgroundColor' );
+            console.log( camelize("list-style-image") == 'listStyleImage' );
+            console.log( camelize("-webkit-transition") == 'WebkitTransition' );
+        })();
+
+    </script>
+    
+</body>
+</html>
