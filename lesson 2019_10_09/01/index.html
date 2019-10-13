@@ -20,6 +20,21 @@
         <li><a href="http://nodejs.org">http://nodejs.org</a></li>
         <li><a href="http://internal.com/test">http://internal.com/test</a></li>
     </ul>
-      
+
+    <script>
+        (function () {
+            let elems = document.querySelectorAll('a');
+            //console.log(elems);
+            elems.forEach(function (elem) {
+                let url = String(elem.getAttribute('href')).toLowerCase();
+                console.log(url);
+                if (url == null || url.indexOf('http://internal.com') > -1 || url.indexOf('://') == -1) {
+                    return true;
+                }
+                
+                elem.classList.add('external');
+            });
+        })();
+    </script>
 </body>
 </html>
