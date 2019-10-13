@@ -1,0 +1,12 @@
+Напишите функцию highlight, которая для каждой строки tr таблицы:
+    1. Проставит класс available/unavailable, в зависимости от значения атрибута data-available у ячейки Status
+    2. Проставит property hidden, если такого атрибута нет вообще
+    3. Проставит класс male/female, в зависимости от содержимого ячекйки Gender
+    4. Установит inline-стиль style="text-decoration: line-through", если значение ячейки Age меньше 18
+
+Name 	Age 	Gender Status
+Ilia 	30 	m 	Free
+Tim 	39 	m 	On duty
+Marina 	25 	f 	Ready to teach
+Klivden 42 	m 	Leeeroy Jenkins!
+Ivan 	17 	m 	Ready to teach

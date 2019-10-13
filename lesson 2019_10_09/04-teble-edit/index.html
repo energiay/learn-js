@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <div class="js-app">
+      <h3>Напишите функцию <i>highlight</i>, 
+        которая для каждой строки <i>tr</i> таблицы:</h3>
+      <ol>
+        <li>
+          Проставит класс <i>available/unavailable</i>,
+          в зависимости от значения атрибута <i>data-available</i> у ячейки
+          <i>Status</i>
+        </li>
+        <li>
+          Проставит property <i>hidden</i>, если такого атрибута нет вообще
+        </li>
+        <li>
+          Проставит класс <i>male/female</i>,
+          в зависимости от содержимого ячекйки <i>Gender</i>
+        </li>
+        <li>
+          Установит inline-стиль <i>style="text-decoration: line-through"</i>,
+          если значение ячейки Age меньше 18
+        </li>
+      </ol>
+      <table class="js-teachers">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td>Status</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ilia</td>
+            <td>30</td>
+            <td>m</td>
+            <td data-available="true">Free</td>
+          </tr>
+          <tr>
+            <td>Tim</td>
+            <td>39</td>
+            <td>m</td>
+            <td data-available="false">On duty</td>
+          </tr>
+          <tr>
+            <td>Marina</td>
+            <td>25</td>
+            <td>f</td>
+            <td data-available="true">Ready to teach</td>
+          </tr>
+          <tr>
+            <td>Klivden</td>
+            <td>42</td>
+            <td>m</td>
+            <td>Leeeroy Jenkins!</td>
+          </tr>
+          <tr>
+            <td>Ivan</td>
+            <td>17</td>
+            <td>m</td>
+            <td data-available="true">Ready to teach</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
