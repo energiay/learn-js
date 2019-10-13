@@ -16,13 +16,12 @@
         }
       };
 
-    let get
 
-    let createTreeText = function (content, obj) {
+    let createTreeText = function (obj) {
         let li = '';
         let ul;
         for (let key in obj) {
-            li += '<li>' + key + createTreeText(content, obj[key]) + '</li>';
+            li += '<li>' + key + createTreeText(obj[key]) + '</li>';
         }
         
         if (li) {
@@ -33,8 +32,9 @@
     }
     
     let createTree = function (container, obj) {
-        container.innerHTML = createTreeText(container, obj);
+        container.innerHTML = createTreeText(obj);
     }
+
 
     let container = document.getElementById('container');
     createTree(container, data); // создаёт дерево в контейнере
