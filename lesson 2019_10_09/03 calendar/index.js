@@ -16,26 +16,25 @@
      * @param {*} weekDay 
      */
     let dayOfMonth = function (days, weekDay) {
-        let result = [];
+        let result = []; // собираем данные в массив
 
+        // вс последний день недели
         if (weekDay == 0) {
             weekDay = 7;
         }
 
-        let i = 0;
         let countDays = 0;
 
         result.push('<tr>');
-        while (true) {
-            i++;
+        for (let i = 1; i <= 42; i++) {
             
-            // 1 день не совпал с Пн
+            // если 1 день не совпал с Пн
             if (i < weekDay) {
                 result.push('<td></td>');
                 continue;
             }
             
-            // Если последний день не совпал с Вс
+            // если последний день не совпал с Вс
             if (countDays >= days) {
                 result.push('<td></td>');
                 
@@ -52,7 +51,7 @@
             
             // Закрываем неделю и начинаем новую
             if (i%7 == 0) {
-                result.push('</tr>' + '<tr>');
+                result.push('</tr><tr>');
             }
         }
         result.push('</tr>');
@@ -93,5 +92,5 @@
 
     // Точка входа
     let elem = document.querySelector('.js_add');
-    createCalendar(elem, 2019, 2);
+    createCalendar(elem, 2019, 9);
 })();
