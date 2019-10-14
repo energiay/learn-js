@@ -24,9 +24,10 @@
         }
 
         let countDays = 0;
+        let MAX_CELLS_OF_MONTH = 42;
 
         result.push('<tr>');
-        for (let i = 1; i <= 42; i++) {
+        for (let i = 1; i <= MAX_CELLS_OF_MONTH; i++) {
             
             // если 1 день не совпал с Пн
             if (i < weekDay) {
@@ -34,14 +35,13 @@
                 continue;
             }
             
-            // если последний день не совпал с Вс
             if (countDays >= days) {
                 result.push('<td></td>');
-                
                 if (i%7 == 0) {
                     break;
                 }
                 
+                // если последний день не совпал с Вс
                 continue;
             }
             
