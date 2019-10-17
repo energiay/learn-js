@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #field {
+      width: 200px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+      cursor: default;
+    }
+
+    #ball {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="field">
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <script>
+      (function () {
+          document.querySelector('#field').addEventListener('click', function (event) {
+              
+              let top = event.target.clientHeight / 2;
+              let left = event.target.clientWidth / 2;
+              
+              let ball = this.querySelector('img');
+              ball.style.top = top - (ball.height / 2) + 'px';
+              ball.style.left = left - (ball.width / 2) + 'px';
+              
+          });
+      })();
+  </script>
+
+
+</body>
+
+</html>
