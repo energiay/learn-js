@@ -21,7 +21,7 @@
         let li = '';
         let ul;
         for (let key in obj) {
-            li += '<li>' + key + createTreeText(obj[key]) + '</li>';
+            li += '<li>' + '<span>' + key + '</span>' + createTreeText(obj[key]) + '</li>';
         }
         
         if (li) {
@@ -38,4 +38,18 @@
 
     let container = document.getElementById('container');
     createTree(container, data); // создаёт дерево в контейнере
+
+    // скрыть\показать дерево
+    document.querySelector('#container').addEventListener('click', function (e) {
+      let elem = e.target;
+      if (elem.tagName !== 'SPAN') {
+        return;
+      }
+
+      let toggleElem = elem.closest('li').querySelector('ul');
+      if (toggleElem != null) {
+        toggleElem.classList.toggle('hide');
+      }
+    });
+
 })();
