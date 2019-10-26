@@ -1,0 +1,38 @@
+
+.wrp_slider {
+    --background: #cc003d;
+    height: 130px;
+    width: 390px;
+    overflow: hidden;
+}
+
+ul {
+    width: 999999px;
+    margin:0;
+    padding:0;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    display: block;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left, .right {
+    cursor: pointer;
+}
+
+.slider > div {
+    margin: 50px 4px;
+}
