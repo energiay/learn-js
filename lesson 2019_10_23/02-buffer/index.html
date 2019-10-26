@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+        (function () {
+            
+            function makeBuffer() {
+                let arrResult = [];
+                
+                return function (text) {
+                    if (text) {
+                        arrResult.push(text)
+                        return;
+                    }
+
+                    return arrResult.join('');
+                }
+            }
+
+            var buffer = makeBuffer();
+
+            // добавить значения к буферу
+            buffer('Замыкания');
+            buffer(' Использовать');
+            buffer(' Нужно!');
+
+            // получить текущее значение
+            console.log( buffer() ); // Замыкания Использовать Нужно!
+
+        })();
+
+    </script>
+    
+</body>
+</html>

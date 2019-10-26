@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        (function () {
+            function makeArmy() {
+                let arr = [];
+
+                let i = 0;
+                while (i < 10) {
+                    let j = i;
+                    let shooter = function() { // функция shooter
+                        console.log( j ); // должна выводить порядковый номер
+                    };
+                    arr.push(shooter);
+                    i++;
+                }
+
+                return arr;
+            }
+
+            let army = makeArmy();
+
+            // тут выводим порядковые номера
+            let i = 0;
+            while (i < 10) {
+                army[i]();
+                i++;
+            }
+
+        })();    
+    </script>
+    
+</body>
+</html>

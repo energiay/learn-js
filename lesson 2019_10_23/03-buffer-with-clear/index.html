@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+        (function () {
+            
+            function makeBuffer() {
+                let arrResult = [];
+                
+                let buffer = function (text) {
+                    if (text) {
+                        arrResult.push(text)
+                        return;
+                    }
+
+                    return arrResult.join('');
+                }
+
+                buffer.clear = function () {
+                    arrResult = [];
+                }
+
+                return buffer;
+            }
+
+            var buffer = makeBuffer();
+
+            buffer("Тест");
+            buffer(" тебя не съест ");
+            console.log( buffer() ); // Тест тебя не съест
+
+            buffer.clear();
+
+            console.log( buffer() ); // ""
+
+        })();
+
+    </script>
+    
+</body>
+</html>

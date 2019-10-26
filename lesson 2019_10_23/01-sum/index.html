@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+        (function () {
+
+            let sum = function (a) {
+                return function (b) {
+                    return a + b;
+                }
+            }
+
+            let a = 7;
+            let b = 2;
+            console.log( sum(a)(b) );
+
+        })();
+
+    </script>
+    
+</body>
+</html>
