@@ -5,13 +5,102 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div>
+        <ul class="js_add_li"></ul>
+    </div>
+
     <script>
         (function () {
-            let fn = function qwe ({a, b}) {
-                console.log(a, b);
-            }
+            //01 деструктуризация
+            // let fn = function qwe ({a, b}) {
+            //     console.log(a, b);
+            // }
+            // fn({a: '111', b: '222'});
+            
 
-            fn({a: '111', b: '222'});
+
+            //02 
+            //  let user = {
+            //     name: 'Ivan',
+            //     sayHi: function () {
+            //         console.log(this.name);
+            //     }
+            // }
+            // var Ivan = user;
+            // //user = null;
+            // console.log(Ivan, user);
+            // user = null;
+            // Ivan.sayHi();
+
+
+
+            //03
+            // function Admin(firstName, lastName) {
+            //     User.call(this, firstName, lastName);
+
+            //     this.pass = function () {
+            //         return this.fullname() + ': password';
+            //     }
+            // }
+            // function User(firstName, lastName) {
+            //     this.firstName = firstName;
+            //     this.lastName = lastName;
+            //     this.fullname = function () {
+            //         return this.firstName + ' ' + this.lastName;
+            //     }
+            // } 
+            // var user = new User('Иван', 'Иванов');
+            // console.log( user.fullname() );
+            // var admin = new Admin('Петр', 'Петров');
+            // console.log( admin.fullname() );
+            // console.log( admin.pass() );
+
+
+
+            //04 декораторы (обернуть дни недели в любой тег)
+            // let arr = ['пн','вт','ср','чт','пт','сб','вс'];
+            // let getElem = function (index) {
+            //     return arr[index];
+            // }
+            // let decorator = function (fn, begin, end) {
+            //     return function () {
+            //         return begin + fn.apply(this, arguments) + end;
+            //     }
+            // }
+            // let getDay = decorator(getElem, '<li>', '</li>')
+            // let sHtml = '';
+            // for (let i = 0; i < arr.length; i++) {
+            //     sHtml += getDay(i);
+            // }
+            // document.querySelector('.js_add_li').innerHTML = sHtml;
+
+
+
+            //05 эксперементирую с контекстом
+            // let user = {
+            //     firstName: 'Ivan',
+            //     lastName: 'Tulinov',
+            //     hello: function () {
+            //         console.log('Привет, ' + this.firstName + '!');
+            //         let self = this;
+            //         // return () => { 
+            //         //     console.log(this);
+            //         //     console.log(self);
+            //         // }
+            //         return function () {
+            //             console.log(this);
+            //             console.log(self);
+            //         }
+            //     }
+            // }
+            // let action = {
+            //     type: 'user',
+            //     getHi: user.hello
+            // }
+            // user.hello()();
+            // action.getHi()();
+
 
         })()
     </script>
