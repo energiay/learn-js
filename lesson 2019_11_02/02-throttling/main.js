@@ -1,15 +1,16 @@
 (function () {
     
-    let throttle = function (fn, ms) {
-        
+    let throttle = function (fn, ms) {     
         let execute = 0;
         let timerId;
         
         return function (val) {
             let self = this; // сохраняю контекст
+            
             if (execute + ms < Date.now()) {
                 fn.call(self, val);
                 execute = Date.now();
+                return
             }
             
             clearTimeout(timerId);
