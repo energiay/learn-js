@@ -10,7 +10,10 @@
             if (execute + ms < Date.now()) {
                 fn.call(self, val);
                 execute = Date.now();
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 6c8509643840c9f60a4db86cc4c5ba6b8699e22b
                 return
             }
             
