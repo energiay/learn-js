@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>Клик на элементе выделяет только его.</div>
+    <div>Ctrl(Cmd)+Клик добавляет/убирает элемент из выделенных.</div>
+    <div>Shift+Клик добавляет промежуток от последнего кликнутого к выделению.</div>
+    <ul>
+        <li>ПК</li>
+        <li>Ноут</li>
+        <li class="">Планшет</li>
+        <li>Мобильный</li>
+        <li>Плеер</li>
+        <li>Наушники</li>
+        <li>Часы</li>
+    </ul>
+    <button class="js_show">Показать выделенное</button>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script>
+        
+        var listSelect = new ListSelect({
+            elem: document.querySelector('ul')
+        });
+        document.querySelector(".js_show").onclick = function () {
+            alert( listSelect.getSelected() );
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+ul > li {
+    cursor: default;
+    width: 100px;
+    font-weight: 800;
+    user-select: none;
+}
+
+.selected {
+    background: #61b2e0;
+}
