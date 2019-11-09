@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js_start">Start</button>
+    <button class="js_stop">Stop</button>
+    <button class="js_alert">Alert</button>
+    <div class="clock js_time"></div>
+    
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script>
+        
+        var clock = new Clock({
+            elem: document.querySelector('.js_time')
+        });
+        document.querySelector(".js_start").onclick = clock.start; // старт
+        document.querySelector(".js_stop").onclick = clock.stop; // стоп
+        
+        // alert
+        document.querySelector(".js_alert").onclick = function () {
+            alert('Проверить корректность работы часов...');
+        }
+
+    </script>
+</body>
+</html>

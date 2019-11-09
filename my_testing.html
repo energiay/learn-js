@@ -13,14 +13,15 @@
     <script>
         (function () {
             //01 деструктуризация
-            // let fn = function qwe ({a, b}) {
+            // let fn = function qwe ({a, b}, ...args) {
             //     console.log(a, b);
+            //     console.log(args);
             // }
-            // fn({a: '111', b: '222'});
+            // fn({a: '111', b: '222', c: '123', d: [1,2,3,4,5,6,7,8,9,0]});
             
 
 
-            //02 
+            //02 обнулить ссылку на объект
             //  let user = {
             //     name: 'Ivan',
             //     sayHi: function () {
@@ -35,7 +36,7 @@
 
 
 
-            //03
+            //03 наследование
             // function Admin(firstName, lastName) {
             //     User.call(this, firstName, lastName);
 
@@ -100,6 +101,25 @@
             // }
             // user.hello()();
             // action.getHi()();
+
+
+            //06 типы
+            // let getType = Object.prototype.toString;
+            // let arr = [];
+            // console.log(getType.call(arr));
+            // let User = {
+            //     [Symbol.toStringTag]: "User",
+            // };
+            // console.log(getType.call(User));
+            // let XMLHttpRequest1 = new XMLHttpRequest();
+            // console.log(getType.call(XMLHttpRequest1));
+            // let User1 = function () {
+            //     this[Symbol.toStringTag] = "User1";
+            // }
+            // let newUser1 = new User1;
+            // console.log(Object.prototype.toString.call(User1));
+            // console.log(Object.prototype.toString.call(newUser1));
+
 
 
         })()
